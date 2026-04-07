@@ -1,11 +1,4 @@
-//
-//  User.swift
-//  swiftgram
-//
-//  Created by Danila Okunev on 21.02.26.
-//
-
-struct User: Codable {
+struct User: TelegramEntity {
     let id: Int64
     let isBot: Bool
     

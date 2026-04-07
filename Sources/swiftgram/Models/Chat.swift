@@ -1,9 +1,3 @@
-//
-//  Chat.swift
-//  swiftgram
-//
-//  Created by Danila Okunev on 21.02.26.
-//
 enum ChatType: String, Codable {
     case `private`
     case group
@@ -11,7 +5,7 @@ enum ChatType: String, Codable {
     case channel
 }
 
-struct Chat: Codable {
+struct Chat: TelegramEntity {
     let id: Int64
     let type: ChatType
     let title: String?
