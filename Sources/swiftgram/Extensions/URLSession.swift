@@ -10,11 +10,10 @@ extension URLSession {
         let wrapper = try decoder.decode(TelegramWrapper<Value>.self, from: data)
         
         if (200...299).contains(statusCode) && wrapper.ok {
-            if let entity = wrapper.result {
-                return entity
-            } else {
-                throw TelegramError.apiError("Status code and Ok is success, but result is nil")
+            guard let entity = wrapper.result else {
+                throw TelegramError.apiError("`statusCode` and wrapper is ok, but result is nil")
             }
+            return entity
         } else {
             if let description = wrapper.description {
                 throw TelegramError.badStatusCode(statusCode, description: description)
