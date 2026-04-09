@@ -1,0 +1,8 @@
+import Foundation
+
+/// This object represents an inline keyboard button that copies specified text to the clipboard.
+struct CopyTextButton: TelegramEntity {
+    
+    /// The text to be copied to the clipboard; 1-256 characters
+    let text: String
+}

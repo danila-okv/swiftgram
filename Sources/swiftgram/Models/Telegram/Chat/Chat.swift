@@ -6,7 +6,7 @@ enum ChatType: String, Codable {
 }
 
 struct Chat: TelegramEntity {
-    let id: Int64
+    let id: Int
     let type: ChatType
     let title: String?
     let username: String?

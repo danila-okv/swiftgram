@@ -1,10 +1,3 @@
-//
-//  Endpoint.swift
-//  swiftgram
-//
-//  Created by Danila Okunev on 21.02.26.
-//
-
 import Foundation
 
 enum Endpoint {
